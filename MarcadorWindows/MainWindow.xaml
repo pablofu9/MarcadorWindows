@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MarcadorWindows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Marcador Windows" Height="450" Width="800">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="791*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnPoinsPlayer1" Content="Jose/Luis" HorizontalAlignment="Left" Margin="18,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.408,0.554" Height="45" Width="124" Click="Button_Click" Background="Black" Foreground="#FF999999" BorderThickness="2,2,2,2" BorderBrush="#FFF20C0C"/>
+        <Rectangle HorizontalAlignment="Left" Height="5" Margin="10,74,0,0" Stroke="#FFFC0808" VerticalAlignment="Top" Width="558" Fill="#FFFC0808"/>
+        <TextBox x:Name="TextPlayer1" HorizontalAlignment="Left" Height="43" Margin="18,20,0,0" TextWrapping="Wrap" Text="Jose/Luis" VerticalAlignment="Top" Width="224" Background="Black" Foreground="#FFAAAAAA" FontSize="30"  BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextPlayer2" HorizontalAlignment="Left" Height="43" Margin="18,91,0,0" TextWrapping="Wrap" Text="Victor/Marcos" VerticalAlignment="Top" Width="224" Background="Black" Foreground="#FFAAAAAA" FontSize="30"  BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextSet1Player1" HorizontalAlignment="Left" Height="54" Margin="265,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54" Background="Black" Foreground="#FFFE0202" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextSet1Player2" HorizontalAlignment="Left" Height="54" Margin="265,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54" Background="Black" Foreground="#FFFE0202" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextSet2Player1" HorizontalAlignment="Left" Height="54" Margin="343,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54" Background="Black" Foreground="#FFFE0202" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextSet3Player1" HorizontalAlignment="Left" Height="54" Margin="419,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54" Background="Black" Foreground="#FFFE0202" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextSet2Player2" HorizontalAlignment="Left" Height="54" Margin="343,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54" Background="Black" Foreground="#FFFE0202" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextSet3Player2" HorizontalAlignment="Left" Height="54" Margin="419,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54" Background="Black" Foreground="#FFFE0202" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextPointsPlayer1" HorizontalAlignment="Left" Height="54" Margin="496,14,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72" Background="Black" Foreground="#ffffff" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <TextBox x:Name="TextPointsPlayer2" HorizontalAlignment="Left" Height="54" Margin="496,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="72" Background="Black" Foreground="#ffffff" FontSize="40"  FontWeight="Bold" TextAlignment="Center" IsEnabled="False" BorderThickness="0,0,0,0"/>
+        <Button x:Name="BtnPoinsPlayer2" Content="Victor/Marcos" HorizontalAlignment="Left" Margin="179,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.408,0.554" Height="45" Width="124" Click="Button1_Click" BorderBrush="#FFF30A0A" Background="Black" Foreground="#FF999999" BorderThickness="2,2,2,2"/>
+        <Button x:Name="BtnEdit" Content="Edicion off" HorizontalAlignment="Left" Height="45" Margin="455,184,0,0" VerticalAlignment="Top" Width="117" Background="DarkRed" FontSize="20" BorderThickness="0,0,0,0" Click="Button_Click_1"/>
+
     </Grid>
 </Window>
