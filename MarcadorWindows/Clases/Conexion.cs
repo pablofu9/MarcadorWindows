@@ -15,7 +15,7 @@ namespace MarcadorWindows
         static String servidor = "localhost";
         static String bd = "marcador";
         static String user = "root";
-        static String pass = "pabloygala96";
+        static String pass = "root";
         static String port = "3306";
 
         String cadenaConexion = "server=" + servidor + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + pass + ";" + "database=" + bd + ";";
@@ -33,6 +33,21 @@ namespace MarcadorWindows
                 MessageBox.Show("Error al conectar: "+e.ToString());
             }
             return conex;
+        }
+        public MySqlDataReader ExecuteReader(string sql)
+        {
+            try
+            {
+                MySqlDataReader reader;
+                MySqlCommand cmd = new MySqlCommand(sql, conex);
+                reader = cmd.ExecuteReader();
+                return reader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
         }
     }
 }

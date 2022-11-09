@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +20,37 @@ namespace MarcadorWindows
     /// </summary>
     public partial class Login : Window
     {
+        Conexion c1 = new Conexion();
         public Login()
         {
             InitializeComponent();
+            
+
+
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Conexion c1 = new Conexion();
+
+
             c1.establecerConexion();
+            if (txtUser.Text != "" && txtPass.Text != "")
+                {
+                    
+                    MySqlCommand cmd=new MySqlCommand ("select nombre,pass FROM usuarios WHERE nombre ='" + txtUser.Text + "' AND pass ='" + txtPass.Text + "'");
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    
+                    if (reader.Read())
+                    {
+                        MessageBox.Show("Successfully Sign In!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username And Password Not Match!");
+                    }
+            }
+            
+            
 
         }
 
