@@ -20,12 +20,14 @@ namespace MarcadorWindows
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         Marcador miMarcador=new Marcador("Jose","Pepe",3);
         private bool estadoEdicion;
         public MainWindow()
         {
             InitializeComponent();
-            estadoEdicion=false;
+            
+            estadoEdicion =false;
             miMarcador.PartidoFinalizado += OnPartidoFinalizado;
         }
 
@@ -51,6 +53,7 @@ namespace MarcadorWindows
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             miMarcador.PuntoLocal();
             ActualizaMarcador();
         }
